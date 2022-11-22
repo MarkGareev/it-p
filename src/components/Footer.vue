@@ -32,7 +32,11 @@
                 <button class="call full">Заказать звонок</button>
             </form>
             <div class="footer-contacts">
-                <img src="../assets/LogoFooter.svg" alt="Logo" />
+                <img
+                    class="footer-contacts-logo"
+                    src="../assets/LogoFooter.svg"
+                    alt="Logo"
+                />
 
                 <div class="footer-contacts-location">
                     <div class="footer-contacts-location-address">
@@ -58,15 +62,15 @@ export default {
 <style lang="scss">
 footer {
     position: relative;
-    height: 800px;
-    padding: 50px 40px 40px 40px;
+    height: 800rem;
+    padding: 50rem 40rem 40rem 40rem;
     background: #000000;
 }
 form {
-    grid-template-rows: repeat(3, max-content);
-    margin-top: 30px;
     display: grid;
-    gap: 20px;
+    grid-template-rows: repeat(3, max-content);
+    margin-top: 30rem;
+    gap: 20rem;
 
     grid-template-columns: repeat(2, 1fr);
     .full {
@@ -75,51 +79,60 @@ form {
 }
 input {
     font-weight: 500;
-    font-size: 20px;
-    line-height: 28px;
+    font-size: 20rem;
+    line-height: 28rem;
     color: #808080;
-    padding-left: 30px;
+    padding-left: 30rem;
     &:enabled {
         color: #fff;
     }
     &:focus {
         outline: 0 !important;
     }
-    height: 80px;
-    border: 1px solid #ffffff;
+    height: 80rem;
+    border: 1rem solid #ffffff;
     background-color: #000000;
 }
 .call {
-    min-height: 80px;
+    min-height: 80rem;
     height: 100%;
     cursor: pointer;
     background-color: #4120c5;
     color: #fff;
     font-weight: 500;
-    font-size: 20px;
-    line-height: 24px;
+    font-size: 20rem;
+    line-height: 24rem;
 }
 .footer-contacts {
     position: absolute;
-    bottom: 50px;
-    display: flex;
-    align-items: flex-start;
+    bottom: 50rem;
+    width: calc(100% - 40rem);
+    display: grid;
+    gap: 30rem;
+    grid-template-columns: 1fr 1fr;
+    justify-items: end;
+    align-items: end;
+
+    &-logo {
+        justify-self: start;
+        width: 100%;
+        max-width: 720px;
+    }
     &-location {
-        display: grid;
-        margin-left: 159px;
-        gap: 30px;
+        margin-right: 50rem;
+
         &-address {
-            font-size: 20px;
-            line-height: 28px;
+            font-size: 20rem;
+            line-height: 28rem;
             color: #ffffff;
+            margin-bottom: 30rem;
         }
         &-onmap {
             cursor: pointer;
-
-            font-size: 20px;
-            line-height: 28px;
+            font-size: 20rem;
+            line-height: 28rem;
             text-decoration: underline;
-            text-underline-offset: 5px;
+            text-underline-offset: 5rem;
             color: #808080;
         }
     }

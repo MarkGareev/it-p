@@ -1,16 +1,16 @@
 <template>
     <div id="app" class="app">
-        <Navbar @goToPage="goToPage1" />
+        <Navbar class="navbar" @goToPage="goToPage1" />
         <div class="main" v-on:scroll="onScroll">
             <PageOne class="container" />
             <PageTwo id="page-two" class="container" />
             <PageThree id="page-three" class="container" />
             <Footer id="footer" class="container" />
-            <button
+            <!-- <button
                 class="upArrow"
                 v-if="getIsShowButton"
                 @click="scrollTop"
-            ></button>
+            ></button> -->
         </div>
     </div>
 </template>
@@ -63,11 +63,39 @@ export default {
 </script>
 
 <style lang="scss">
+html {
+    font-size: 1px;
+}
 * {
     font-family: "Grtsk Peta";
     box-sizing: border-box;
     margin: 0px;
     padding: 0px;
+}
+@media (max-width: 1580px) {
+    html {
+        font-size: 0.9px;
+    }
+}
+@media (max-width: 1255px) {
+    html {
+        font-size: 0.7px;
+    }
+}
+@media (max-width: 1000px) {
+    html {
+        font-size: 0.6px;
+    }
+}
+@media (max-width: 768px) {
+    * {
+        display: none;
+    }
+}
+@media (max-width: 425px) {
+    html {
+        font-size: 1px;
+    }
 }
 @font-face {
     font-family: "Grtsk Peta";
@@ -79,24 +107,25 @@ export default {
     font-style: normal;
 }
 .app {
+    max-width: 100%;
     display: grid;
     grid-template-columns: 1fr 3fr;
 }
 
 .container {
-    padding-top: 50px;
+    padding-top: 50rem;
 }
 .upArrow {
     cursor: pointer;
     background-color: transparent;
-    border: 1px solid#EFF0F5;
+    border: 1rem solid#EFF0F5;
     border-radius: 50%;
     position: fixed;
-    width: 80px;
-    height: 80px;
+    width: 80rem;
+    height: 80rem;
 
-    right: 40px;
-    bottom: 80px;
+    right: 40rem;
+    bottom: 80rem;
     &::after {
         z-index: 2;
         content: url(assets/up.svg);

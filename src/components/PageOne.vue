@@ -23,41 +23,60 @@ export default {
 };
 </script>
 <style lang="scss">
+@media (min-width: 1920px) {
+    .wrapper {
+        background-size: 100% auto;
+    }
+    .form {
+        width: 62.95% !important;
+    }
+}
+
+@media (max-width: 1255px) {
+    .form {
+        width: 440px !important;
+    }
+}
+
 .wrapper {
+    padding-right: 40rem;
+
     position: relative;
-    height: 950px;
-    margin-left: 40px;
+    height: 100vh;
+
+    margin-left: 40rem;
     background-image: url(../assets/Lines.svg);
-    background-repeat: repeat-x;
+    background-repeat: repeat;
 }
 h3 {
     padding: 0;
     margin: 0;
     font-weight: 500;
-    font-size: 20px;
-    line-height: 28px;
+    font-size: 20rem;
+    line-height: 28rem;
     color: #808080;
 }
 h1 {
-    margin-top: 20px;
+    margin-top: 20rem;
     font-weight: 500;
-    font-size: 80px;
-    line-height: 85px;
+    font-size: 80rem;
+    line-height: 85rem;
     letter-spacing: -0.02em;
     color: #000000;
 }
 .form {
-    cursor: pointer;
-    position: absolute;
-    bottom: 80px;
-    min-width: 400px;
-    background: #4120c5;
+    // margin-right: 80px;
+    height: 80rem;
     width: 880px;
-    height: 80px;
-    border: none;
 
-    font-size: 20px;
-    line-height: 24px;
+    position: absolute;
+    bottom: 50rem;
+
+    cursor: pointer;
+    background: #4120c5;
+    border: none;
+    font-size: 20rem;
+    line-height: 24rem;
     text-align: center;
     color: #ffffff;
 }

@@ -1,9 +1,7 @@
 <template>
     <div>
         <div class="string">
-            <h3 style="margin-left: 40px; margin-bottom: 20px">
-                Услуги компании
-            </h3>
+            <h3>Услуги компании</h3>
 
             <div class="services">
                 <a target="_blank" href="../1.pdf">
@@ -118,15 +116,19 @@ export default {
 </script>
 <style lang="scss">
 .string {
+    h3 {
+        padding-left: 40rem;
+        padding-bottom: 20rem;
+    }
     display: flex;
     justify-content: space-between;
-    padding-right: 50px;
+    padding-right: 50rem;
 }
 .services {
-    font-size: 20px;
-    line-height: 28px;
+    font-size: 20rem;
+    line-height: 28rem;
     text-align: right;
-    text-underline-offset: 5px;
+    text-underline-offset: 5rem;
 
     a {
         text-decoration: none;
@@ -135,26 +137,26 @@ export default {
 }
 .services-count {
     font-weight: 500;
-    font-size: 80px;
-    line-height: 85px;
+    font-size: 80rem;
+    line-height: 85rem;
     letter-spacing: -0.02em;
     color: #000000;
-    margin-left: 40px;
-    margin-bottom: 20px;
+    margin-left: 40rem;
+    margin-bottom: 20rem;
 }
 
 .services-item {
     position: relative;
     font-weight: 500;
-    font-size: 20px;
-    line-height: 28px;
-    padding: 30px 0 0 0px;
+    font-size: 20rem;
+    line-height: 28rem;
+    padding: 30rem 0 0 0rem;
     &:after {
         transform: translateX(-50%);
         left: 50%;
         content: "";
-        height: 1px;
-        width: calc(100% - 80px);
+        height: 1rem;
+        width: calc(100% - 80rem);
         position: absolute;
         top: 0;
         background-color: transparent;
@@ -166,7 +168,7 @@ export default {
     }
 
     &-text {
-        padding: 0px 40px 30px 40px;
+        padding: 0rem 40rem 30rem 40rem;
     }
 
     a {
@@ -195,15 +197,15 @@ export default {
 }
 .list-all {
     padding: 0;
-    margin: 50px 0 50px 40px;
-    font-size: 20px;
-    line-height: 28px;
+    margin: 50rem 0 0 40rem;
+    font-size: 20rem;
+    line-height: 140%;
 
     cursor: pointer;
     background: none;
     border: none;
     text-decoration: underline;
-    text-underline-offset: 5px;
+    text-underline-offset: 5rem;
 
     color: #808080;
 }

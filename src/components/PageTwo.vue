@@ -46,20 +46,20 @@ export default {
 <style lang="scss">
 .wrapperTwo {
     background-color: #4120c5;
+    padding-bottom: 50rem;
 }
 
 .tenders {
-    margin-top: 144px;
+    margin-top: 104rem;
 
-    padding-bottom: 50px;
     a {
         cursor: pointer;
 
-        font-size: 20px;
-        line-height: 28px;
-        margin-left: 40px;
+        font-size: 20rem;
+        line-height: 28rem;
+        margin-left: 40rem;
         text-decoration: underline;
-        text-underline-offset: 5px;
+        text-underline-offset: 5rem;
         color: rgba(255, 255, 255, 0.6);
     }
 }

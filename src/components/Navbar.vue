@@ -1,9 +1,9 @@
 <template>
     <aside>
-        <div class="content">
-            <div class="logo">
+        <div class="logo">
                 <a href="#"><img src="@/assets/Logo.svg" alt="logo" /></a>
             </div>
+        <div class="content">            
             <h2>
                 Информационные технологии <br />
                 — Поволжье
@@ -24,8 +24,8 @@
                 <a
                     href="https://www.list-org.com/company/8001397"
                     target="_blank"
-                    >Карточка компании на list-org</a
-                >
+                    >Карточка компании на&nbsplist&#8209org
+                </a>
             </div>
         </div>
         <div class="contacts">
@@ -75,7 +75,16 @@ export default {
 
 <style lang="scss">
 aside {
-    top: 0px;
+    .logo {
+            a {
+                img {
+                    width: 236rem;
+                    max-width: 236px;
+                }
+            }
+            padding: 50rem 40rem 20rem 40rem;
+        }
+    top: 0;
     background-color: #23116b;
 
     height: 100vh;
@@ -85,16 +94,14 @@ aside {
 
     .content {
         flex: 1 0 auto;
-        .logo {
-            padding: 50px 0px 20px 40px;
-        }
+        
         h2 {
             font-weight: 500;
-            font-size: 12px;
-            line-height: 18px;
+            font-size: 12rem;
+            line-height: 150%;
             color: rgba(255, 255, 255, 0.6);
-            margin-bottom: 80px;
-            padding-left: 40px;
+            margin-bottom: 80rem;
+            padding-left: 40rem;
         }
 
         .menu-item {
@@ -106,13 +113,13 @@ aside {
                 background: none;
                 cursor: pointer;
                 justify-content: flex-start;
-                padding: 25px 0 25px 40px;
+                padding: 25rem 0 25rem 40rem;
                 width: 100%;
                 border: none;
-                border-bottom: 2px solid rgba(255, 255, 255, 0.2);
+                border-bottom: 2rem solid rgba(255, 255, 255, 0.2);
                 font-weight: 500;
-                font-size: 20px;
-                line-height: 28px;
+                font-size: 20rem;
+                line-height: 28rem;
             }
             &:last-child {
                 button {
@@ -122,14 +129,11 @@ aside {
         }
 
         .listorg {
-            padding-right: 40px;
-            margin-top: 25px;
-            padding-left: 40px;
-            font-size: 20px;
-            line-height: 28px;
+            margin: 25rem 40rem;
             a {
-                text-underline-offset: 5px;
-
+                font-size: 20rem;
+                line-height: 140%;
+                text-underline-offset: 5rem;
                 text-decoration-line: underline;
                 color: rgba(255, 255, 255, 0.5);
             }
@@ -139,13 +143,13 @@ aside {
     .contacts {
         flex: 0 0 auto;
 
-        margin-bottom: 50px;
+        margin-bottom: 50rem;
 
         .address {
-            margin-left: 40px;
-            margin-bottom: 50px;
-            font-size: 20px;
-            line-height: 28px;
+            margin-left: 40rem;
+            margin-bottom: 50rem;
+            font-size: 20rem;
+            line-height: 140%;
             a {
                 color: #fff;
                 text-decoration: none;
@@ -153,17 +157,16 @@ aside {
         }
         .contact {
             cursor: pointer;
-            margin-left: 40px;
-            // margin-right: 40px;
-            padding: 28px 0;
-            width: calc(100% - 80px);
-            // padding: 28px 0;
+            margin-left: 40rem;
+            padding: 28rem 0;
+            width: calc(100% - 80rem);
+            height: 80rem;
             background-color: transparent;
-            border: 2px solid rgba(255, 255, 255, 0.2);
+            border: 2rem solid rgba(255, 255, 255, 0.2);
 
             font-weight: 500;
-            font-size: 20px;
-            line-height: 24px;
+            font-size: 20rem;
+            line-height: 24rem;
 
             color: #ffffff;
         }
