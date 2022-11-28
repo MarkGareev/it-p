@@ -1,19 +1,16 @@
 <template>
     <div>
-        <h3 class="pageTwoH3">Компания</h3>
-        <div>
-            <div
-                class="items"
-                v-for="(item, index) in list"
-                :key="index"
-                :class="{ active: listActiveIndex.includes(index) }"
-            >
-                <h1 @click="setActiveIndex(index)">
-                    {{ item.title }}
-                    <img src="../assets/EllipseIcon.svg" alt="EllipseIcon" />
-                </h1>
-                <p v-if="listActiveIndex.includes(index)">{{ item.text }}</p>
-            </div>
+        <div
+            class="items"
+            v-for="(item, index) in list"
+            :key="index"
+            :class="{ active: listActiveIndex.includes(index) }"
+        >
+            <h1 @click="setActiveIndex(index)">
+                {{ item.title }}
+                <img src="../assets/EllipseIcon.svg" alt="EllipseIcon" />
+            </h1>
+            <p v-if="listActiveIndex.includes(index)">{{ item.text }}</p>
         </div>
     </div>
 </template>
@@ -45,19 +42,11 @@ export default {
 </script>
 
 <style lang="scss">
-.pageTwoH3 {
-    padding-left: 40rem;
-    margin-bottom: 20rem;
-    color: rgba(255, 255, 255, 0.6);
-    font-weight: 500;
-    font-size: 20rem;
-    line-height: 28rem;
-}
 .items {
     padding: 35rem 0 45rem 40rem;
-
-    color: #fff;
-
+    @media (max-width: 425px) {
+        padding: 0rem 0 20rem 20rem;
+    }
     h1 {
         cursor: pointer;
         position: relative;
@@ -68,13 +57,22 @@ export default {
         letter-spacing: -0.02em;
         color: #fff;
         img {
-            // content: url(../assets/EllipseIcon.svg);
             width: 58rem;
             height: 58rem;
             position: absolute;
-            right: 51rem;
+            right: 50rem;
             top: 50%;
             transform: translate(0, -50%);
+            @media (max-width: 425px) {
+                width: 40rem;
+                height: 40rem;
+                right: 20rem;
+            }
+        }
+
+        @media (max-width: 425px) {
+            font-size: 35rem;
+            line-height: 40rem;
         }
     }
     &:not(:last-child) {
@@ -86,6 +84,10 @@ export default {
                 content: url(../assets/EllipseIcon180.svg);
                 width: 58rem;
                 height: 58rem;
+                @media (max-width: 425px) {
+                    width: 40rem;
+                    height: 40rem;
+                }
             }
         }
     }
@@ -96,6 +98,12 @@ export default {
         font-size: 20rem;
         line-height: 140%;
         color: #fff;
+        @media (max-width: 425px) {
+            margin-top: 20rem;
+            font-size: 14rem;
+            width: 100%;
+            padding-right: 20rem;
+        }
     }
 }
 </style>

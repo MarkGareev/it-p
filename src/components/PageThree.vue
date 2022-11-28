@@ -1,11 +1,11 @@
 <template>
-    <div>
+    <div class="wrapperThree">
         <div class="string">
             <h3>Услуги компании</h3>
 
             <div class="services">
                 <a target="_blank" href="../1.pdf">
-                    <u>Все услуги компании</u> <br />
+                    <u>Все услуги</u> <br />
                     (PDF)
                 </a>
             </div>
@@ -115,24 +115,41 @@ export default {
 };
 </script>
 <style lang="scss">
+.wrapperThree {
+    padding: 50rem 0;
+    @media (max-width: 425px) {
+        padding: 30rem 0;
+    }
+}
 .string {
     h3 {
-        padding-left: 40rem;
-        padding-bottom: 20rem;
+        margin-left: 40rem;
+        @media (max-width: 425px) {
+            margin-left: 20rem;
+            font-size: 10rem;
+            line-height: 12rem;
+        }
     }
     display: flex;
     justify-content: space-between;
     padding-right: 50rem;
+    @media (max-width: 425px) {
+        padding-right: 20rem;
+    }
 }
 .services {
     font-size: 20rem;
     line-height: 28rem;
     text-align: right;
     text-underline-offset: 5rem;
-
     a {
         text-decoration: none;
         color: #808080;
+    }
+    @media (max-width: 425px) {
+        font-size: 10rem;
+        line-height: 15rem;
+        text-underline-offset: 3rem;
     }
 }
 .services-count {
@@ -143,6 +160,13 @@ export default {
     color: #000000;
     margin-left: 40rem;
     margin-bottom: 20rem;
+    @media (max-width: 425px) {
+        margin-top: -20rem;
+        margin-left: 20rem;
+        font-size: 40rem;
+        margin-bottom: -10rem;
+        padding: 0;
+    }
 }
 
 .services-item {
@@ -150,7 +174,13 @@ export default {
     font-weight: 500;
     font-size: 20rem;
     line-height: 28rem;
-    padding: 30rem 0 0 0rem;
+    padding-top: 30rem;
+
+    @media (max-width: 425px) {
+        padding-top: 10rem;
+        font-size: 14rem;
+        line-height: 20rem;
+    }
     &:after {
         transform: translateX(-50%);
         left: 50%;
@@ -160,6 +190,9 @@ export default {
         position: absolute;
         top: 0;
         background-color: transparent;
+        @media (max-width: 425px) {
+            width: calc(100% - 40rem);
+        }
     }
     &:not(&:first-child) {
         &:after {
@@ -169,29 +202,29 @@ export default {
 
     &-text {
         padding: 0rem 40rem 30rem 40rem;
+        @media (max-width: 425px) {
+            padding: 0rem 20rem 10rem 20rem;
+        }
     }
 
-    a {
-        cursor: default;
-        text-decoration: none;
-        color: #000000;
-    }
-    &:hover {
-        background: #4120c5;
+    @media (min-width: 769px) {
+        &:hover {
+            background: #4120c5;
 
-        &:not(&:first-child) {
-            &:after {
-                background-color: transparent;
+            &:not(&:first-child) {
+                &:after {
+                    background-color: transparent;
+                }
             }
-        }
 
-        + .services-item {
-            &:after {
-                background-color: transparent;
+            + .services-item {
+                &:after {
+                    background-color: transparent;
+                }
             }
-        }
-        a {
-            color: #fff;
+            a {
+                color: #fff;
+            }
         }
     }
 }
@@ -208,5 +241,10 @@ export default {
     text-underline-offset: 5rem;
 
     color: #808080;
+    @media (max-width: 425px) {
+        margin: 30rem 0 0 20rem;
+        font-size: 10rem;
+        line-height: 12rem;
+    }
 }
 </style>

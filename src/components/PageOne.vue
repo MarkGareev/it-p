@@ -6,7 +6,7 @@
             оборудования российских <br />
             и зарубежных производителей
         </h1>
-        <button class="form" @click="goToPage">Форма обратной связи</button>
+        <button class="form" @click="goToPage">Заказать звонок</button>
     </div>
 </template>
 <script>
@@ -23,38 +23,43 @@ export default {
 };
 </script>
 <style lang="scss">
-@media (min-width: 1920px) {
-    .wrapper {
-        background-size: 100% auto;
-    }
-    .form {
-        width: 62.95% !important;
-    }
-}
-
-@media (max-width: 1255px) {
-    .form {
-        width: 440px !important;
-    }
-}
-
 .wrapper {
+    margin-left: 40rem;
     padding-right: 40rem;
+    padding: 50rem 40rem 50rem 0;
 
     position: relative;
     height: 100vh;
-
-    margin-left: 40rem;
     background-image: url(../assets/Lines.svg);
     background-repeat: repeat;
+
+    @media (min-width: 1920px) {
+        background-size: 100% auto;
+    }
+    @media (max-width: 768px) {
+        background-size: 100%;
+        height: 1000rem;
+    }
+    @media (max-width: 425px) {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: max-content max-content 1fr;
+        height: calc(100vh - 60rem);
+        margin-left: 0;
+        padding: 30rem 20rem;
+
+        background-image: url(../assets/BackgroundMobile.svg);
+    }
 }
 h3 {
-    padding: 0;
-    margin: 0;
     font-weight: 500;
     font-size: 20rem;
     line-height: 28rem;
     color: #808080;
+    @media (max-width: 425px) {
+        font-size: 10rem;
+        line-height: 12rem;
+    }
 }
 h1 {
     margin-top: 20rem;
@@ -63,9 +68,12 @@ h1 {
     line-height: 85rem;
     letter-spacing: -0.02em;
     color: #000000;
+    @media (max-width: 425px) {
+        font-size: 35rem;
+        line-height: 114%;
+    }
 }
 .form {
-    // margin-right: 80px;
     height: 80rem;
     width: 880px;
 
@@ -79,5 +87,23 @@ h1 {
     line-height: 24rem;
     text-align: center;
     color: #ffffff;
+
+    @media (min-width: 1920px) {
+        width: 62.95%;
+    }
+    @media (max-width: 1255px) {
+        width: 440px;
+    }
+    @media (max-width: 768px) {
+        width: 62.95%;
+    }
+    @media (max-width: 425px) {
+        width: 100%;
+        position: unset;
+        align-self: end;
+        font-size: 14rem;
+        line-height: 17rem;
+        height: 60rem;
+    }
 }
 </style>

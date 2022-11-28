@@ -2,15 +2,13 @@
     <div id="app" class="app">
         <Navbar class="navbar" @goToPage="goToPage1" />
         <div class="main" v-on:scroll="onScroll">
-            <PageOne class="container" />
-            <PageTwo id="page-two" class="container" />
-            <PageThree id="page-three" class="container" />
-            <Footer id="footer" class="container" />
-            <!-- <button
-                class="upArrow"
-                v-if="getIsShowButton"
-                @click="scrollTop"
-            ></button> -->
+            <PageOne />
+            <PageTwo id="page-two" />
+            <PageThree id="page-three" />
+            <Footer id="footer" />
+            <button class="upArrow" v-if="getIsShowButton" @click="scrollTop">
+                <img src="../src/assets/up.svg" alt="" />
+            </button>
         </div>
     </div>
 </template>
@@ -63,14 +61,38 @@ export default {
 </script>
 
 <style lang="scss">
-html {
-    font-size: 1px;
-}
 * {
     font-family: "Grtsk Peta";
     box-sizing: border-box;
     margin: 0px;
     padding: 0px;
+}
+html {
+    font-size: 1px;
+}
+
+.app {
+    max-width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 3fr;
+}
+
+.upArrow {
+    cursor: pointer;
+    background-color: #eff0f5;
+    border: 1rem solid#EFF0F5;
+    border-radius: 50%;
+    position: fixed;
+    width: 80rem;
+    height: 80rem;
+
+    right: 40rem;
+    bottom: 80rem;
+    img {
+        z-index: 2;
+        width: 20%;
+        content: url(assets/up.svg);
+    }
 }
 @media (max-width: 1580px) {
     html {
@@ -88,13 +110,38 @@ html {
     }
 }
 @media (max-width: 768px) {
-    * {
+    .app {
+        display: flex !important;
+        flex-direction: column;
+    }
+    .upArrow {
         display: none;
+    }
+}
+@media (max-width: 550px) {
+    html {
+        font-size: 0.45px;
     }
 }
 @media (max-width: 425px) {
     html {
         font-size: 1px;
+    }
+}
+
+@media (max-width: 385px) {
+    html {
+        font-size: 0.9px;
+    }
+}
+@media (max-width: 350px) {
+    html {
+        font-size: 0.8px;
+    }
+}
+@media (max-width: 310px) {
+    html {
+        font-size: 0.7px;
     }
 }
 @font-face {
@@ -105,34 +152,5 @@ html {
         url("./assets/GrtskPeta-Medium.ttf") format("truetype");
     font-weight: 500;
     font-style: normal;
-}
-.app {
-    max-width: 100%;
-    display: grid;
-    grid-template-columns: 1fr 3fr;
-}
-
-.container {
-    padding-top: 50rem;
-}
-.upArrow {
-    cursor: pointer;
-    background-color: transparent;
-    border: 1rem solid#EFF0F5;
-    border-radius: 50%;
-    position: fixed;
-    width: 80rem;
-    height: 80rem;
-
-    right: 40rem;
-    bottom: 80rem;
-    &::after {
-        z-index: 2;
-        content: url(assets/up.svg);
-    }
-    &:hover {
-        background-color: #23116b;
-        border: none;
-    }
 }
 </style>
